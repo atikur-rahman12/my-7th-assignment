@@ -5,7 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Layout from "./Layout/Layout";
 import Home from "./pages/HomePage/HomePage";
 import TimeLine from "./pages/TimeLine/TimeLine";
-import States from "./pages/States/States"
+import States from "./pages/States/States";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +22,11 @@ const router = createBrowserRouter([
         element: <TimeLine />,
       },
       {
-        path: "/States",
+        path: "/states",
         element: <States />,
       },
     ],
+    errorElement: <ErrorPage />,
   },
 ]);
 
