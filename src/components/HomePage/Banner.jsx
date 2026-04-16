@@ -4,7 +4,7 @@ import { FaPlus } from "react-icons/fa";
 const Banner = () => {
   return (
     <div className="hero bg-base-200">
-      <div className="mt-20">
+      <div className="mt-20 container mx-auto">
         <div className="hero-content text-center">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold">

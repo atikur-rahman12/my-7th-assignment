@@ -3,7 +3,7 @@ import React from "react";
 const Card = () => {
   return (
     <div className="bg-base-200">
-      <div className="p-15 mx-auto w-11/12 grid grid-cols-1 gap-4 md:grid-cols-4">
+      <div className="p-15 container mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         <div className="card py-10 bg-base-100 card-lg shadow-sm">
           <div className="card-body flex justify-center items-center text-center h-full ">
             <h2 className="text-3xl font-bold">10</h2>
@@ -29,6 +29,7 @@ const Card = () => {
           </div>
         </div>
       </div>
+      <hr className="container mx-auto border-t-2 border-gray-300" />
     </div>
   );
 };
