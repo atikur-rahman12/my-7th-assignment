@@ -23,7 +23,7 @@ const TimeLine = () => {
   return (
     <div className="bg-base-200">
       <div className="p-15 container mx-auto">
-        <h1 className="text-2xl font-bold mb-4">Timeline</h1>
+        <h1 className="text-2xl font-bold text-[#244D3F] mb-4">Timeline</h1>
         <select
           value={filter}
           onChange={(e) => setFilter(e.target.value)}

@@ -3,16 +3,15 @@ import { RiHome2Line } from "react-icons/ri";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { LuChartLine } from "react-icons/lu";
 import { NavLink } from "react-router";
+import NavBarLogo from "../../../assets/logo.png";
 
 const NavBar = () => {
-
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
         <div className="navbar-start">
-          <a className="btn btn-ghost flex gap-0 text-xl sm:text-3xl">
-            <span className="font-extrabold">Keen</span>
-            <span className="text-[#244D3F]">Keeper</span>
+          <a className="btn btn-ghost flex gap-0">
+            <img src={NavBarLogo} alt="Logo" />
           </a>
         </div>
         <div className="navbar-end w-full ">

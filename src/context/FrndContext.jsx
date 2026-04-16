@@ -7,10 +7,24 @@ const FrndContext = ({ children }) => {
   const [timeline, setTimeline] = useState([]);
 
   const handleAction = (currentAction, friendName) => {
+    const now = new Date();
+
+    const weekDay = now.toLocaleDateString("en-US", {
+      weekday: "long",
+    });
+
+    const dayMonthYear = now.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    });
+
+    const historyTime = `${weekDay} • ${dayMonthYear}`;
+
     const newEntry = {
       action: currentAction,
       name: friendName,
-      time: new Date().toLocaleString(),
+      time: historyTime,
     };
 
     setTimeline((prev) => [...prev, newEntry]);
