@@ -9,6 +9,7 @@ import States from "./pages/States/States";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import FriendDetails from "./pages/FriendDetails/FriendDetails";
 import FrndContext from "./context/FrndContext";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,15 @@ createRoot(document.getElementById("root")).render(
         }
       >
         <RouterProvider router={router} />
+        <ToastContainer
+          position="top-center" // ✅ top center
+          autoClose={2000}
+          hideProgressBar={true}
+          closeOnClick
+          pauseOnHover
+          draggable
+          theme="colored"
+        />
       </Suspense>
     </FrndContext>
   </StrictMode>,

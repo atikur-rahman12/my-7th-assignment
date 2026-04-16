@@ -107,7 +107,7 @@ const FriendDetails = () => {
                 <button className="btn">Edit</button>
               </div>
               <p className="mt-6">
-                <span className="text-[#64748B]">Connected Every</span>
+                <span className="text-[#64748B] mr-2">Connected Every</span>
                 <span className="font-semibold text-[16px]">{goal} Days</span>
               </p>
             </div>

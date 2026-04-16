@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export const FriendContext = createContext();
 
@@ -6,17 +7,23 @@ const FrndContext = ({ children }) => {
   const [timeline, setTimeline] = useState([]);
 
   const handleAction = (currentAction, friendName) => {
-
     const newEntry = {
-        action: currentAction,
-        name: friendName,
-        time: new Date().toLocaleString(),
+      action: currentAction,
+      name: friendName,
+      time: new Date().toLocaleString(),
     };
 
-    setTimeline((prev) => [...prev, newEntry])
+    setTimeline((prev) => [...prev, newEntry]);
 
-    alert("Button Clicked: " + currentAction);
-    console.log(newEntry , "newentry");
+    (toast.success(`${currentAction} with ${friendName}`),
+      {
+        position: "top-center",
+        style: {
+          textAlign: "center",
+          fontWeight: "600",
+          fontSize: "16px",
+        },
+      });
   };
 
   const data = {
