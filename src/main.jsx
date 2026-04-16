@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router";
@@ -7,6 +7,7 @@ import Home from "./pages/HomePage/HomePage";
 import TimeLine from "./pages/TimeLine/TimeLine";
 import States from "./pages/States/States";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import FriendDetails from "./pages/FriendDetails/FriendDetails";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
         path: "/states",
         element: <States />,
       },
+      {
+        path: "/friendsDetails/:friendsId",
+        element: <FriendDetails />,
+      },
     ],
     errorElement: <ErrorPage />,
   },
@@ -32,6 +37,14 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    <Suspense
+      fallback={
+        <div className="flex justify-center items-center h-screen">
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
+      }
+    >
+      <RouterProvider router={router} />
+    </Suspense>
   </StrictMode>,
 );

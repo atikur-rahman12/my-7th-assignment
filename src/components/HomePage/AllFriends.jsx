@@ -1,4 +1,5 @@
 import React, { use } from "react";
+import { Link } from "react-router";
 
 const friendsPromise = fetch("/friendsData.json").then((res) => res.json());
 
@@ -14,7 +15,6 @@ const AllFriends = () => {
   };
 
   const friends = use(friendsPromise);
-  console.log(friends);
   return (
     <div className="bg-base-200">
       <div className="p-15 container mx-auto">
@@ -23,7 +23,11 @@ const AllFriends = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 mt-5">
           {friends.map((friend) => {
             return (
-              <div className="card py-10 bg-base-100 card-sm shadow-md">
+              <Link
+                to={`/friendsDetails/${friend.id}`}
+                key={friend.id}
+                className="card py-10 bg-base-100 card-sm shadow-md"
+              >
                 <div className="card-body flex justify-center items-center text-center h-full ">
                   <img
                     className="rounded-full"
@@ -31,7 +35,9 @@ const AllFriends = () => {
                     alt="Friends"
                   />
                   <h2 className="text-2xl font-semibold">{friend.name}</h2>
-                  <p className="text-gray-500 text-lg">{friend.days_since_contact}</p>
+                  <p className="text-gray-500 text-lg">
+                    {friend.days_since_contact} days ago
+                  </p>
                   <div className="flex gap-2 flex-wrap justify-center mt-2">
                     {friend.tags.map((tag, index) => (
                       <div
@@ -48,7 +54,7 @@ const AllFriends = () => {
                     {friend.status}
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
