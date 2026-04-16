@@ -1,14 +1,17 @@
-import React, { use } from "react";
+import React, { use, useContext } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 import { FiArchive } from "react-icons/fi";
 import { LuMessageSquareMore } from "react-icons/lu";
 import { PiVideoCameraBold } from "react-icons/pi";
 import { RiDeleteBin6Line, RiNotificationSnoozeLine } from "react-icons/ri";
 import { useParams } from "react-router";
+import { FriendContext } from "../../context/FrndContext";
 
 const friendsPromise = fetch("/friendsData.json").then((res) => res.json());
 
 const FriendDetails = () => {
+  const { handleAction } = useContext(FriendContext);
+
   const statusStyle = (status) => {
     if (status === "Almost Due") {
       return "bg-[#EFAD44]";
@@ -24,7 +27,6 @@ const FriendDetails = () => {
   const friends = use(friendsPromise);
 
   const clickedFriendCard = friends.find((friend) => friend.id == friendsId);
-  console.log(clickedFriendCard, "clickedFriendCard");
 
   const {
     name,
@@ -105,7 +107,7 @@ const FriendDetails = () => {
                 <button className="btn">Edit</button>
               </div>
               <p className="mt-6">
-                <span className="text-[#64748B]">Connected Every</span>{" "}
+                <span className="text-[#64748B]">Connected Every</span>
                 <span className="font-semibold text-[16px]">{goal} Days</span>
               </p>
             </div>
@@ -115,13 +117,22 @@ const FriendDetails = () => {
                 Quick Check-In
               </h1>
               <div className="mt-2 flex justify-between gap-6">
-                <button className="btn text-xl flex-1 h-22 flex flex-col items-center gap-2">
+                <button
+                  className="btn text-xl flex-1 h-22 flex flex-col items-center gap-2"
+                  onClick={() => handleAction("Call", name)}
+                >
                   <BiPhoneCall className="text-3xl" /> Call
                 </button>
-                <button className="btn text-xl flex-1 h-22 flex flex-col items-center gap-2">
+                <button
+                  className="btn text-xl flex-1 h-22 flex flex-col items-center gap-2"
+                  onClick={() => handleAction("Text", name)}
+                >
                   <LuMessageSquareMore className="text-3xl" /> Text
                 </button>
-                <button className="btn text-xl flex-1 h-22 flex flex-col items-center gap-2">
+                <button
+                  className="btn text-xl flex-1 h-22 flex flex-col items-center gap-2"
+                  onClick={() => handleAction("Video", name)}
+                >
                   <PiVideoCameraBold className="text-3xl" /> Video
                 </button>
               </div>

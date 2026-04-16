@@ -8,6 +8,7 @@ import TimeLine from "./pages/TimeLine/TimeLine";
 import States from "./pages/States/States";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import FriendDetails from "./pages/FriendDetails/FriendDetails";
+import FrndContext from "./context/FrndContext";
 
 const router = createBrowserRouter([
   {
@@ -37,14 +38,16 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Suspense
-      fallback={
-        <div className="flex justify-center items-center h-screen">
-          <span className="loading loading-spinner loading-lg"></span>
-        </div>
-      }
-    >
-      <RouterProvider router={router} />
-    </Suspense>
+    <FrndContext>
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center h-screen">
+            <span className="loading loading-spinner loading-lg"></span>
+          </div>
+        }
+      >
+        <RouterProvider router={router} />
+      </Suspense>
+    </FrndContext>
   </StrictMode>,
 );
