@@ -40,12 +40,16 @@ const FriendDetails = () => {
 
   return (
     <div className="bg-base-200">
-      <div className="p-15 container mx-auto">
-        <div className="card lg:card-side items-start gap-6">
+      <div className="p-4 sm:p-6 lg:p-10 container mx-auto">
+        <div className="flex flex-col lg:flex-row gap-6">
           <div className="bg-base-200 ">
-            <div className="card py-10 bg-base-100 h-90 w-96 shadow-md">
+            <div className="card py-10 bg-base-100 h-90 w-full lg:w-96 shadow-md">
               <div className="card-body flex justify-center items-center text-center h-full ">
-                <img className="rounded-full" src={picture} alt="Friends" />
+                <img
+                  className="rounded-full w-24 h-24 sm:w-28 sm:h-28 mx-auto"
+                  src={picture}
+                  alt="Friends"
+                />
                 <h2 className="text-2xl font-semibold">{name}</h2>
                 <div
                   className={`badge font-medium text-lg rounded-full p-4 text-white ${statusStyle(status)}`}
@@ -67,7 +71,7 @@ const FriendDetails = () => {
               </div>
             </div>
 
-            <div className="w-96 mx-auto mt-5 space-y-3">
+            <div className="w-full lg:w-96 mx-auto mt-5 space-y-3">
               <button className="btn w-full bg-base-100 shadow-md">
                 <RiNotificationSnoozeLine className="text-xl" /> Snooze 2 Weeks
               </button>
