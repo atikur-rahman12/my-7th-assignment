@@ -22,4 +22,14 @@ This project is a modern web application built using React.js/Next.js that provi
 
 ---
 
+## 📷 Preview
+<img width="1918" height="897" alt="Capture" src="https://github.com/user-attachments/assets/6cf18cda-a102-4e8b-87dc-07e8aac6e4c2" />
+
+
+---
+
+## 🔗 Live Demo
+https://jolly-liger-56a46e.netlify.app/
+
+---
 
