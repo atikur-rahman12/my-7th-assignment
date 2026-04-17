@@ -11,8 +11,8 @@ const Banner = () => {
               Friends to keep close in your life
             </h1>
             <p className="py-6">
-              Your personal shelf of meaningful connections. Browse, tend, <br /> and
-               nurture the relationships that matter most.
+              Your personal shelf of meaningful connections. Browse, tend, and
+               nurture the <br /> relationships that matter most.
             </p>
             <button className="btn bg-[#244D3F] text-white font-semibold">
               {" "}
