@@ -8,14 +8,14 @@ import NavBarLogo from "../../../assets/logo.png";
 const NavBar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
-        <div className="navbar-start">
-          <a className="btn btn-ghost flex gap-0">
-            <img src={NavBarLogo} alt="Logo" />
+      <div className="navbar bg-base-100 shadow-sm px-2 flex-wrap md:flex-nowrap">
+        <div className="navbar-start w-auto">
+          <a className="btn btn-ghost p-0">
+            <img src={NavBarLogo} alt="Logo" className="h-8 md:h-10 w-auto" />
           </a>
         </div>
-        <div className="navbar-end w-full ">
-          <ul className="menu menu-horizontal flex gap-2 overflow-x-auto whitespace-nowrap font-medium text-sm lg:text-xl px-1">
+        <div className="navbar-center ml-auto">
+          <ul className="menu menu-horizontal gap-1 md:gap-2 font-medium text-xs md:text-base justify-end w-full">
             <li>
               <NavLink
                 to={"/"}
