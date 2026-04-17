@@ -1,4 +1,4 @@
-# 🚀 Project Name: Your Project Name Here
+# 🚀 Project Name: KeenKeeper Project / 7th-Assignment
 
 ## 📌 Short Description
 This project is a modern web application built using React.js/Next.js that provides a responsive UI with smooth navigation, data visualization, and a clean user experience. It is designed to be fast, scalable, and user-friendly.
@@ -7,8 +7,8 @@ This project is a modern web application built using React.js/Next.js that provi
 
 ## 🛠️ Technologies Used
 
-- **React.js / Next.js** – For building the user interface
-- **React Router DOM / Next.js App Router** – For handling page navigation
+- **React.js** – For building the user interface
+- **React Router DOM** – For handling page navigation
 - **Tailwind CSS + Component Library (shadcn/ui, DaisyUI, etc.)** – For styling and responsiveness
 - **Recharts** – For creating interactive charts and data visualization
 
@@ -22,10 +22,4 @@ This project is a modern web application built using React.js/Next.js that provi
 
 ---
 
-## 📂 Installation & Setup (Optional)
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-npm install
-npm run dev
