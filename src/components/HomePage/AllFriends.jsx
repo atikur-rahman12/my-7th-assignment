@@ -26,7 +26,7 @@ const AllFriends = () => {
               <Link
                 to={`/friendsDetails/${friend.id}`}
                 key={friend.id}
-                className="card py-10 bg-base-100 card-sm shadow-md"
+                className="card py-10 bg-base-100 card-sm shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 <div className="card-body flex justify-center items-center text-center h-full ">
                   <img

@@ -11,7 +11,7 @@ const Layout = () => {
 
       <NavBar />
 
-      <div className="flex-1">
+      <div className="flex-1 overflow-visible">
         <Outlet />
       </div>
 

@@ -7,8 +7,7 @@ import NavBarLogo from "../../../assets/logo.png";
 
 const NavBar = () => {
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm px-2 flex-wrap md:flex-nowrap">
+      <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50 px-2 flex-wrap md:flex-nowrap">
         <div className="navbar-start w-auto">
           <a className="btn btn-ghost p-0">
             <img src={NavBarLogo} alt="Logo" className="h-8 md:h-10 w-auto" />
@@ -49,7 +48,6 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
-    </div>
   );
 };
 
