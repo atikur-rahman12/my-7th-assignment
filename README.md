@@ -29,7 +29,7 @@ This project is a modern web application built using React.js/Next.js that provi
 ---
 
 ## 🔗 Live Demo
-https://jolly-liger-56a46e.netlify.app/
+https://my-7th-assignment-teal.vercel.app/
 
 ---
 
