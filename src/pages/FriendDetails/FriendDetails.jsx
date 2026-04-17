@@ -85,21 +85,27 @@ const FriendDetails = () => {
               </button>
             </div>
           </div>
-          <div className="bg-base-200 flex-1 grid grid-cols-3 auto-rows-[160px] gap-6">
-            <div className="bg-base-100 shadow-md p-15 h-full flex flex-col justify-center items-center text-center">
-              <h1 className="text-3xl font-semibold">{days_since_contact}</h1>
+          <div className="bg-base-200 flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[120px] sm:auto-rows-[140px] lg:auto-rows-[160px] gap-4 sm:gap-6">
+            <div className="bg-base-100 shadow-md p-4 sm:p-6 h-full flex flex-col justify-center items-center text-center">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center leading-tight">
+                {days_since_contact}
+              </h1>
               <p className="text-[#64748B] text-lg">Days Since Contact</p>
             </div>
-            <div className="bg-base-100 shadow-md p-15 h-full flex flex-col justify-center items-center text-center">
-              <h1 className="text-3xl font-semibold">{goal}</h1>
+            <div className="bg-base-100 shadow-md p-4 sm:p-6 h-full flex flex-col justify-center items-center text-center">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center leading-tight">
+                {goal}
+              </h1>
               <p className="text-[#64748B] text-lg">Goal (Days)</p>
             </div>
-            <div className="bg-base-100 shadow-md p-15 h-full flex flex-col justify-center items-center text-center">
-              <h1 className="text-3xl font-semibold">{next_due_date}</h1>
+            <div className="bg-base-100 shadow-md p-4 sm:p-6 h-full flex flex-col justify-center items-center text-center">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center leading-tight">
+                {next_due_date}
+              </h1>
               <p className="text-[#64748B] text-lg">Next Due</p>
             </div>
 
-            <div className="bg-base-100 col-span-3 shadow-md p-8">
+            <div className="bg-base-100 col-span-3 shadow-md p-5">
               <div className="flex justify-between">
                 <h1 className="text-[#244D3F] text-xl font-medium">
                   Relationship Goal
