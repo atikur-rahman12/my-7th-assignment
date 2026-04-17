@@ -23,7 +23,8 @@ This project is a modern web application built using React.js/Next.js that provi
 ---
 
 ## 📷 Preview
-<img width="1918" height="897" alt="Capture" src="https://github.com/user-attachments/assets/6cf18cda-a102-4e8b-87dc-07e8aac6e4c2" />
+<img width="1913" height="948" alt="Capture" src="https://github.com/user-attachments/assets/ad341c8b-25bb-462f-92d2-9a668527575a" />
+
 
 
 ---
