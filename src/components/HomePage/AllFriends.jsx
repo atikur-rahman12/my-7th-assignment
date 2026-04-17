@@ -30,7 +30,7 @@ const AllFriends = () => {
               >
                 <div className="card-body flex justify-center items-center text-center h-full ">
                   <img
-                    className="rounded-full"
+                    className="rounded-full w-35 h-35"
                     src={friend.picture}
                     alt="Friends"
                   />

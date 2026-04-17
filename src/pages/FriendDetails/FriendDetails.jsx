@@ -48,7 +48,7 @@ const FriendDetails = () => {
             <div className="card py-10 bg-base-100 h-90 w-full lg:w-96 shadow-md">
               <div className="card-body flex justify-center items-center text-center h-full ">
                 <img
-                  className="rounded-full w-24 h-24 sm:w-28 sm:h-28 mx-auto"
+                  className="rounded-full w-35 h-35 sm:w-38 sm:h-38 mx-auto"
                   src={picture}
                   alt="Friends"
                 />
