@@ -1,5 +1,4 @@
-# 🚀 Project Name: KeenKeeper Project / 7th-Assignment
-
+# 🚀 Project Name: KeenKeeper Project 
 ## 📌 Short Description
 This project is a modern web application built using React.js/Next.js that provides a responsive UI with smooth navigation, data visualization, and a clean user experience. It is designed to be fast, scalable, and user-friendly.
 
@@ -30,7 +29,7 @@ This project is a modern web application built using React.js/Next.js that provi
 ---
 
 ## 🔗 Live Demo
-https://my-7th-assignment-teal.vercel.app/
+https://keen-keeper-eight-delta.vercel.app
 
 ---
 
